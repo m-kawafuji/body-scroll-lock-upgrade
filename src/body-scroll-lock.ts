@@ -189,7 +189,7 @@ const restorePositionSetting = () => {
     $body.style.overflow = bodyStyle.overflow || '';
 
     // Restore scroll
-    window.scrollTo(x, y);
+    window.scrollTo({ top: y, left: x, behavior: 'instant' as ScrollBehavior });
 
     bodyStyle = undefined;
   }
